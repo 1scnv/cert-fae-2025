@@ -1,0 +1,8 @@
+sources:
+  - name: raw_adventure_works
+    description: Adventure Works data source.
+    database: FEA24_11
+    schema: raw_adventure_works
+    tables: 
+      - name: address
+        description: Address table info.
