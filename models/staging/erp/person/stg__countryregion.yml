@@ -1,0 +1,18 @@
+models:
+  - name: stg__countryregion
+    description: keep.
+    columns:
+      - name: addressid
+        description: address primary key
+        tests: 
+          - not_null
+          - unique
+              
+      - name: city
+        description: City
+
+      - name: postalcode
+        description: Postal Code
+
+      - name: stateprovinceid
+        description: State Foreign Key

@@ -6,3 +6,12 @@ sources:
     tables: 
       - name: address
         description: Address table info.
+      
+      - name: person
+        description: customer Personal data
+
+      - name: countryregion
+        description: Countries data
+
+      - name: stateprovince
+        description: State and Country data
