@@ -5,7 +5,7 @@ with
             , stateprovincecode
             , countryregioncode
             , name
-        from {{source('raw_adventure_works','stateprovince')}}
+        from {{source('raw_person_aw','stateprovince')}}
     )
 
 select *

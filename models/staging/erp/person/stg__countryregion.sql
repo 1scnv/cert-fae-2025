@@ -3,7 +3,7 @@ with
         select
             countryregioncode
             , name
-        from {{source('raw_adventure_works','countryregion')}}
+        from {{source('raw_person_aw','countryregion')}}
     )
 
 select *

@@ -16,7 +16,7 @@ source as (
         , demographics
         , rowguid
         , modifieddate
-    from {{ source('raw_adventure_works', 'person') }}
+    from {{ source('raw_person_aw', 'person') }}
 
 )
 

@@ -1,0 +1,45 @@
+models:
+  - name: stg__person
+    description: Contains information about individuals and business entities registered in the Adventure Works system. Each record represents a person, which may correspond to a customer, employee, or vendor contact.
+    columns:
+        - name: businessentityid
+          description: Unique identifier for each person or business entity in the database.
+          tests:
+            - not_null
+            - unique
+
+        - name: persontype
+          description: Code identifying the type of person (e.g., SC = Store Contact, IN = Individual Customer, SP = Sales Person, EM = Employee).
+
+        - name: namestyle
+          description: Indicates if the name follows an international format (1 = Yes, 0 = No).
+
+        - name: title
+          description: Title of the person (e.g., Mr., Ms., Dr.), if available.
+
+        - name: firstname
+          description: Person first name.
+
+        - name: middlename
+          description: Person middle name.
+
+        - name: lastname
+          description: Person last name.
+
+        - name: suffix
+          description: Name suffix of the person (e.g., Jr., Sr., III), if applicable.
+
+        - name: emailpromotion
+          description: Indicates the level of consent for receiving promotional emails (0 = None, 1 = Occasional, 2 = Frequent).
+
+        - name: additionalcontactinfo
+          description: XML field containing optional additional contact information.
+
+        - name: demographics
+          description: XML field containing demographic data such as income group, education level, and occupation.
+
+        - name: rowguid
+          description: Globally unique identifier (GUID) for the record, used to ensure data consistency across systems.
+
+        - name: modifieddate
+          description: Date and time when the record was last updated in the source system.

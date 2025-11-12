@@ -1,18 +1,18 @@
 models:
-  - name: stg__stateprovince
-    description: keep.
+  - name: stg__person_stateprovince
+    description: Contains information about states or provinces used for geographic classification in Adventure Works. Each record represents a state or province associated with a specific country region.
     columns:
-      - name: addressid
-        description: address primary key
-        tests: 
+      - name: stateprovinceid
+        description: Unique identifier for the state or province.
+        tests:
           - not_null
           - unique
-              
-      - name: city
-        description: City
 
-      - name: postalcode
-        description: Postal Code
+      - name: stateprovincecode
+        description: Abbreviation or short code representing the state or province (e.g., CA, TX).
 
-      - name: stateprovinceid
-        description: State Foreign Key
+      - name: countryregioncode
+        description: Code identifying the country or region associated with the state or province.
+
+      - name: name
+        description: Full name of the state or province.

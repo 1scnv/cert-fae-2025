@@ -1,18 +1,12 @@
 models:
-  - name: stg__countryregion
-    description: keep.
+  - name: stg__person_countryregion
+    description: Contains reference data for countries or regions used in Adventure Works. Each record represents a distinct country or region associated with states, provinces, and customer addresses.
     columns:
-      - name: addressid
-        description: address primary key
-        tests: 
+      - name: countryregioncode
+        description: Unique code identifying the country or region (e.g., US, CA, FR).
+        tests:
           - not_null
           - unique
-              
-      - name: city
-        description: City
 
-      - name: postalcode
-        description: Postal Code
-
-      - name: stateprovinceid
-        description: State Foreign Key
+      - name: name
+        description: Full name of the country or region.

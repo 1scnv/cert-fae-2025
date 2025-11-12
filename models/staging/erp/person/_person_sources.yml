@@ -1,5 +1,5 @@
 sources:
-  - name: raw_adventure_works
+  - name: raw_person_aw
     description: Adventure Works data source.
     database: FEA24_11
     schema: raw_adventure_works
