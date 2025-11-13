@@ -1,0 +1,18 @@
+models:
+  - name: stg__person_stateprovince
+    description: Contains information about states or provinces used for geographic classification in Adventure Works. Each record represents a state or province associated with a specific country region.
+    columns:
+      - name: stateprovinceid
+        description: Unique identifier for the state or province.
+        tests:
+          - not_null
+          - unique
+
+      - name: stateprovincecode
+        description: Abbreviation or short code representing the state or province (e.g., CA, TX).
+
+      - name: countryregioncode
+        description: Code identifying the country or region associated with the state or province.
+
+      - name: name
+        description: Full name of the state or province.

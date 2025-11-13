@@ -1,0 +1,17 @@
+sources:
+  - name: raw_person_aw
+    description: Adventure Works data source.
+    database: fea_academy
+    schema: adventure_works
+    tables: 
+      - name: person_address
+        description: Address table info.
+      
+      - name: person_person
+        description: customer Personal data
+
+      - name: person_countryregion
+        description: Countries data
+
+      - name: person_stateprovince
+        description: State and Country data

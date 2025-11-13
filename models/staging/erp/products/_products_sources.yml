@@ -1,0 +1,14 @@
+sources:
+  - name: raw_products_aw
+    description: Adventure Works data source.
+    database: fea_academy
+    schema: adventure_works
+    tables: 
+      - name: production_product
+        description: product data
+      
+      - name: production_productsubcategory
+        description: KEEP.
+
+      - name: production_productcategory
+        description: KEEP.

@@ -1,0 +1,21 @@
+models:
+  - name: stg__products_productsubcategory
+    description: Contains the list of product subcategories used to classify items within broader product categories. Each record represents a distinct subcategory within the Adventure Works catalog hierarchy.
+    columns:
+      - name: productsubcategoryid
+        description: Unique identifier for the product subcategory.
+        tests:
+          - not_null
+          - unique
+
+      - name: productcategoryid
+        description: Identifier of the main product category associated with this subcategory.
+
+      - name: name
+        description: Descriptive name of the product subcategory.
+
+      - name: rowguid
+        description: Globally unique identifier (GUID) for the record, used for replication and synchronization processes.
+
+      - name: modifieddate
+        description: Date when the subcategory record was last updated in the source system.

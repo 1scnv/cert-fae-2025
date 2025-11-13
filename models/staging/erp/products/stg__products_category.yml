@@ -1,0 +1,18 @@
+models:
+  - name: stg__products_category
+    description: keep.
+    columns:
+      - name: productcategoryid
+        description: product category primary key
+        tests: 
+          - not_null
+          - unique
+
+      - name: name
+        description: category name
+
+      - name: rowguid
+        description: GUID
+
+      - name: modifieddate
+        description: Last update

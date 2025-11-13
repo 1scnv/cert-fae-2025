@@ -1,0 +1,20 @@
+sources:
+  - name: raw_sales_aw
+    description: Adventure Works data source.
+    database: fea_academy
+    schema: adventure_works
+    tables: 
+      - name: sales_salesorderheader
+        description: keep.
+
+      - name: sales_salesorderdetail
+        description: keep.
+
+      - name: sales_customer
+        description: keep.
+
+      - name: sales_salesperson
+        description: keep.
+
+      - name: sales_salesterritory
+        description: keep.

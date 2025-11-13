@@ -1,0 +1,36 @@
+models:
+  - name: stg__sales_salesterritory
+    description: Contains information about sales territories in Adventure Works. Each record represents a distinct geographical area assigned to salespersons and used for reporting and performance analysis.
+    columns:
+      - name: territoryid
+        description: Unique identifier for the sales territory.
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: Name of the sales territory (e.g., Northwest, Europe).
+
+      - name: countryregioncode
+        description: Code identifying the country or region associated with the territory.
+
+      - name: group
+        description: Group or category that the territory belongs to (e.g., North America, Pacific).
+
+      - name: salesytd
+        description: Total sales year-to-date for the territory.
+
+      - name: saleslastyear
+        description: Total sales for the previous year for the territory.
+
+      - name: costytd
+        description: Total costs year-to-date for the territory.
+
+      - name: costlastyear
+        description: Total costs for the previous year for the territory.
+
+      - name: rowguid
+        description: Globally unique identifier for the record, used for data synchronization.
+
+      - name: modifieddate
+        description: Date and time when the record was last updated.

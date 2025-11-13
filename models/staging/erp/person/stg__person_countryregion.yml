@@ -1,0 +1,11 @@
+models:
+  - name: stg__person_countryregion
+    description: Contains reference data for countries or regions used in Adventure Works. Each record represents a distinct country or region associated with states, provinces, and customer addresses.
+    columns:
+      - name: countryregioncode
+        description: Unique code identifying the country or region (e.g., US, CA, FR).
+        tests:
+          - unique
+
+      - name: name
+        description: Full name of the country or region.

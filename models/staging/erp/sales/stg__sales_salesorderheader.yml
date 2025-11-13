@@ -1,0 +1,81 @@
+models:
+  - name: stg__sales_salesorderheader
+    description: Contains header-level information for each sales order. Each record represents a single customer order and includes financial, shipping, and billing details.
+    columns:
+      - name: salesorderid
+        description: Unique identifier for the sales order.
+        tests:
+          - not_null
+          - unique
+
+      - name: revisionnumber
+        description: Revision number for tracking changes to the sales order.
+
+      - name: orderdate
+        description: Date when the order was created.
+
+      - name: duedate
+        description: Date by which the order is scheduled to be fulfilled.
+
+      - name: shipdate
+        description: Date when the order was shipped to the customer.
+
+      - name: status
+        description: Numeric code representing the status of the order (e.g., In Process, Shipped, Cancelled).
+
+      - name: onlineorderflag
+        description: Indicates whether the order was placed online.
+
+      - name: purchaseordernumber
+        description: Customer’s purchase order number.
+
+      - name: accountnumber
+        description: Customer’s account number used for billing and identification.
+
+      - name: customerid
+        description: Identifier of the customer who placed the order.
+
+      - name: salespersonid
+        description: Identifier of the salesperson responsible for the order.
+
+      - name: territoryid
+        description: Identifier of the sales territory associated with the order.
+
+      - name: billtoaddressid
+        description: Identifier of the billing address for the order.
+
+      - name: shiptoaddressid
+        description: Identifier of the shipping address for the order.
+
+      - name: shipmethodid
+        description: Identifier of the shipping method used for delivery.
+
+      - name: creditcardid
+        description: Identifier of the credit card used for payment, if applicable.
+
+      - name: creditcardapprovalcode
+        description: Approval code returned by the credit card authorization process.
+
+      - name: currencyrateid
+        description: Identifier of the currency exchange rate applied to the order.
+
+      - name: subtotal
+        description: Total value of the order before taxes and shipping fees.
+
+      - name: taxamt
+        description: Amount of sales tax charged on the order.
+
+      - name: freight
+        description: Shipping cost associated with the order.
+
+      - name: totaldue
+        description: Total amount due for the order after all charges.
+
+      - name: comment
+        description: Optional comments or special instructions related to the order.
+
+      - name: rowguid
+        description: Globally unique identifier for the record, used for data synchronization.
+
+      - name: modifieddate
+        description: Date and time when the record was last updated.
