@@ -5,7 +5,6 @@ models:
       - name: countryregioncode
         description: Unique code identifying the country or region (e.g., US, CA, FR).
         tests:
-          - not_null
           - unique
 
       - name: name

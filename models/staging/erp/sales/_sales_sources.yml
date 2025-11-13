@@ -1,5 +1,5 @@
 sources:
-  - name: raw_products_aw
+  - name: raw_sales_aw
     description: Adventure Works data source.
     database: fea_academy
     schema: adventure_works

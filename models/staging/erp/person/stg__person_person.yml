@@ -1,5 +1,5 @@
 models:
-  - name: stg__person
+  - name: stg__person_person
     description: Contains information about individuals and business entities registered in the Adventure Works system. Each record represents a person, which may correspond to a customer, employee, or vendor contact.
     columns:
         - name: businessentityid
