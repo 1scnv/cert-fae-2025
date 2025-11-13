@@ -1,14 +1,14 @@
 sources:
   - name: raw_products_aw
     description: Adventure Works data source.
-    database: FEA24_11
-    schema: raw_adventure_works
+    database: fea_academy
+    schema: adventure_works
     tables: 
-      - name: product
+      - name: production_product
         description: product data
       
-      - name: productsubcategory
+      - name: production_productsubcategory
         description: KEEP.
 
-      - name: productcategory
+      - name: production_productcategory
         description: KEEP.

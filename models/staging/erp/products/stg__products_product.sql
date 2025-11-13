@@ -26,7 +26,7 @@ with
             discontinueddate,
             rowguid,
             modifieddate 
-        from {{source('raw_products_aw','product')}}
+        from {{source('raw_products_aw','production_product')}}
     )
 
 select *

@@ -6,7 +6,7 @@ with
             name,
             rowguid,
             modifieddate
-        from {{source('raw_products_aw','productsubcategory')}}
+        from {{source('raw_products_aw','production_productsubcategory')}}
     )
 
 select *
