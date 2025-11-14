@@ -1,0 +1,36 @@
+models:
+  - name: int__persons
+    description: Intermediate model that standardizes and renames person attributes from the Adventure Works dataset. This model prepares the person entity for downstream transformations in the marts layer.
+    columns:
+      - name: pk_person
+        description: Unique identifier for the person record.
+        tests:
+          - not_null
+          - unique
+
+      - name: person_type
+        description: Code indicating the type of person (e.g., Employee, Store Contact, Individual Customer).
+
+      - name: name_style
+        description: Flag indicating whether the name follows Western style formatting rules.
+
+      - name: title
+        description: Person's title, such as Mr., Mrs., or Ms.
+
+      - name: first_name
+        description: Person's first name.
+
+      - name: middle_name
+        description: Person's middle name.
+
+      - name: last_name
+        description: Person's last name.
+
+      - name: suffix
+        description: Name suffix, such as Jr., Sr., III.
+
+      - name: email_promotion
+        description: Indicates whether the person has opted into email promotions.
+
+      - name: modified_date
+        description: Date and time the person record was last updated.
