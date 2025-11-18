@@ -17,7 +17,7 @@ with
     ),
 
     source_category as (
-        select
+        select 
             productcategoryid as pk_category,
             name as category_name
         from {{ ref("stg__products_category") }}
@@ -33,10 +33,11 @@ with
             subcategory.subcategory_name,
             category.category_name
         from source_product product
-        left join source_subcategory subcategory
+        left join
+            source_subcategory subcategory
             on product.fk_subcategory = subcategory.pk_subcategory
-        left join source_category category
-            on subcategory.fk_category = category.pk_category
+        left join
+            source_category category on subcategory.fk_category = category.pk_category
     )
 
 select *
