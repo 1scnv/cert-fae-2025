@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: int__salesorderheader
+    description: >
+      Intermediate model responsible for standardizing and centralizing
+      order information from the salesorderheader staging layer. This model
+      defines PKs, FKs, and normalized column names before feeding the
+      sales mart.
+
+    columns:
+      - name: pk_salesorder
+        description: Unique identifier for the sales order.
+        tests:
+          - not_null
+          - unique
+
+      - name: date_order
+        description: Date when the order was created.
+
+      - name: date_due
+        description: Due date for payment or delivery.
+
+      - name: date_ship
+        description: Date when the order was shipped.
+
+      - name: order_status
+        description: Numerical status code of the order as defined by the ERP.
+
+      - name: fk_customer
+        description: Foreign key referencing the customer associated with the order.
+
+      - name: fk_salesperson
+        description: Foreign key referencing the salesperson responsible for the order.
+
+      - name: fk_billaddress
+        description: Address used for billing.
+
+      - name: fk_shipaddress
+        description: Address used for shipping.
+
+      - name: fk_shipmethod
+        description: Shipping method selected for the order.
+
+      - name: fk_creditcard
+        description: Credit card used for payment.
