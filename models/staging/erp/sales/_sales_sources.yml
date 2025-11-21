@@ -21,3 +21,6 @@ sources:
 
       - name: sales_store
         description: Contains store entity information linked to customers associated with stores.
+      
+      - name: sales_salesreason
+        description: Contains sales reason information.
