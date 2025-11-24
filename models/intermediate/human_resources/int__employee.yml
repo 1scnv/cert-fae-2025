@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int__employees
+    description: "Intermediate model that enriches employee data with person attributes, including full name and job title."
+    columns:
+      - name: pk_employee
+        description: "Primary key of the employee record."
+        tests:
+          - not_null
+          - unique
+
+      - name: fk_person
+        description: "Foreign key referencing the associated person record."
+        tests:
+          - not_null
+
+      - name: job_title
+        description: "Employee's job title."
+
+      - name: full_name
+        description: "Full name generated from first, middle, and last name fields."
