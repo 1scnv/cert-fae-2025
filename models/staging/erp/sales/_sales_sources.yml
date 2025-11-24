@@ -1,20 +1,26 @@
 sources:
   - name: raw_sales_aw
-    description: Adventure Works data source.
+    description: Adventure Works sales source data.
     database: fea_academy
     schema: adventure_works
-    tables: 
+    tables:
       - name: sales_salesorderheader
-        description: keep.
+        description: Contains sales order header information, including order dates, customer, salesperson and totals.
 
       - name: sales_salesorderdetail
-        description: keep.
+        description: Contains line-level details for each sales order, including product, quantity and pricing.
 
       - name: sales_customer
-        description: keep.
+        description: Contains customer associations with person or store entities.
 
       - name: sales_salesperson
-        description: keep.
+        description: Contains sales representative assignments and performance metrics.
 
       - name: sales_salesterritory
-        description: keep.
+        description: Contains sales territory definitions and regional attribution.
+
+      - name: sales_store
+        description: Contains store entity information linked to customers associated with stores.
+      
+      - name: sales_salesreason
+        description: Contains sales reason information.

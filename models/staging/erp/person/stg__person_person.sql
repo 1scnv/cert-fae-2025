@@ -8,8 +8,8 @@ source as (
         , namestyle
         , title
         , firstname
-        , middlename
-        , lastname
+        , nullif(middlename, '') as middlename
+        , nullif(lastname, '') as lastname
         , suffix
         , emailpromotion
         , additionalcontactinfo

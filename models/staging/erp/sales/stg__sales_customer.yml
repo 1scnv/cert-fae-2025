@@ -11,14 +11,3 @@ models:
       - name: personid
         description: Identifier linking the customer to a person record, if applicable.
 
-      - name: storeid
-        description: Identifier linking the customer to a specific store account.
-
-      - name: territoryid
-        description: Identifier of the sales territory associated with the customer.
-
-      - name: rowguid
-        description: Globally unique identifier for the record, used for data synchronization.
-
-      - name: modifieddate
-        description: Date and time when the record was last updated.

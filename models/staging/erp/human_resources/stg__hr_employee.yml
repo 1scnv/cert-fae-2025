@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg__hr_employee
+    description: >
+      Staging model for the Human Resources Employee table. This model
+      selects and renames the original fields to prepare them for the
+      intermediate layer.
+
+    columns:
+      - name: businessentityid
+        description: Unique identifier for the employee.
+        tests:
+          - not_null
+
+      - name: jobtitle
+        description: Job title held by the employee.
+

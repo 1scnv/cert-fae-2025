@@ -1,0 +1,9 @@
+sources:
+  - name: raw_person_aw
+    description: Adventure Works data source.
+    database: fea_academy
+    schema: adventure_works
+    tables: 
+      - name: humanresources_employee
+        description: Employee Information
+      

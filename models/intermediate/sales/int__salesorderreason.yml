@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int__salesorderreason
+    description: >
+      Intermediate model that prepares the Sales Reason data for analytics
+      usage. This layer renames fields, applies standardized naming
+      conventions, and ensures data quality before loading dimensional models.
+
+    columns:
+      - name: pk_reason
+        description: Primary key for the sales reason.
+        tests:
+          - not_null
+          - unique
+
+      - name: reason
+        description: Human-readable description of the sales reason.
+        tests:
+          - not_null
+
+      - name: reason_type
+        description: Category that groups sales reasons.
+        tests:
+          - not_null

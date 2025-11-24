@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int__salesorderdetail
+    description: >
+      Intermediate model that standardizes and renames fields from the
+      SalesOrderDetail table. It prepares order line item information for
+      downstream consumption in fact and dimension models.
+
+    columns:
+      - name: pk_salesorderdetail
+        description: Primary key of the sales order detail record.
+        tests:
+          - not_null
+          - unique
+
+      - name: fk_salesorder
+        description: Foreign key referencing the related sales order header.
+
+      - name: fk_product
+        description: Foreign key referencing the associated product.
+
+      - name: quantity_ordered
+        description: Number of units ordered in the line item.
+
+      - name: unit_price
+        description: Unit price applied to the product at order time.
+
+      - name: unit_price_discount
+        description: Discount applied to the unit price for this item.
