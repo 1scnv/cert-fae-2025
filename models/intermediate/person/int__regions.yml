@@ -15,7 +15,7 @@ models:
         tests:
           - not_null
 
-      - name: city
+      - name: city_name
         description: Name of the city related to the address.
 
       - name: postal_code
