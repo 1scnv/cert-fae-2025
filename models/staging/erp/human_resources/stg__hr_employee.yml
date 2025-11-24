@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg__humanresources_employee
+  - name: stg__hr_employee
     description: >
       Staging model for the Human Resources Employee table. This model
       selects and renames the original fields to prepare them for the

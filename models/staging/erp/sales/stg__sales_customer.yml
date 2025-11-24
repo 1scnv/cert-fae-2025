@@ -11,5 +11,3 @@ models:
       - name: personid
         description: Identifier linking the customer to a person record, if applicable.
 
-      - name: storeid
-        description: Identifier linking the customer to a specific store account.
