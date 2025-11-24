@@ -14,7 +14,5 @@ with
         from {{ ref("stg__person_person") }}
     )
 
-
-
 select *
 from person

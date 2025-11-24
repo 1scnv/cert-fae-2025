@@ -26,4 +26,4 @@ with
     )
 
 select *
-from customer_enriched;
+from customer_enriched

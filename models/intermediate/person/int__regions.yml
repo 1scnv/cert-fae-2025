@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: int__regions
     description: Intermediate model that consolidates address, state/province, and country information into a unified regional structure. This model prepares geographical attributes for downstream fact and dimension tables.
@@ -24,6 +26,9 @@ models:
 
       - name: code_state_province
         description: Abbreviation or code representing the state or province.
+
+      - name: fk_country
+        description: Country Foreign key
 
       - name: country_name
         description: Name of the country associated with the state or province.

@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: int__persons
     description: Intermediate model that standardizes and renames person attributes from the Adventure Works dataset. This model prepares the person entity for downstream transformations in the marts layer.
