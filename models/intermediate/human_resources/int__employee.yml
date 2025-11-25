@@ -10,7 +10,7 @@ models:
           - not_null
           - unique
 
-      - name: fk_person
+      - name: pk_person
         description: "Foreign key referencing the associated person record."
         tests:
           - not_null
