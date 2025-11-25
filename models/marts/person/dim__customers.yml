@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim__customers
+    description: "Marts model data with customer personal information"
+    columns:
+      - name: pk_customer
+        description: "Primary key of the customer."
+        tests:
+          - not_null
+          - unique
+
+      - name: fk_person
+        description: "Foreign key referencing the associated person record."
+
+      - name: full_name
+        description: "Customer's full name composed of first, middle, and last names using concat_ws."

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int__employee
+  - name: dim__employee
     description: "Intermediate model that enriches employee data with person attributes, including full name and job title."
     columns:
       - name: pk_employee

@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim__regions
+    description: Marts model that consolidates address, state/province, and country information into a unified regional structure.
+    columns:
+      - name: pk_address
+        description: Unique identifier for the address record.
+        tests:
+          - not_null
+          - unique
+
+      - name: pk_state
+        description: Unique identifier for the state or province associated with the address.
+        tests:
+          - not_null
+
+      - name: city_name
+        description: Name of the city related to the address.
+
+      - name: postal_code
+        description: Postal or ZIP code associated with the address.
+
+      - name: state_province_name
+        description: Full name of the state or province.
+
+      - name: code_state_province
+        description: Abbreviation or code representing the state or province.
+
+      - name: fk_country
+        description: Country Foreign key
+
+      - name: country_name
+        description: Name of the country associated with the state or province.
