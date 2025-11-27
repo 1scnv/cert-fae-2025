@@ -1,0 +1,13 @@
+models:
+  - name: stg__sales_salesorderheadersalesreason
+    description: Contains header-level information for each sales order. Each record represents a single customer order and includes financial, shipping, and billing details.
+    columns:
+      - name: salesorderid
+        description: Unique identifier for the sales order.
+        tests:
+          - not_null
+
+      - name: salesreasonid
+        description: Unique identifier for the sales reason.
+        tests:
+          - not_null

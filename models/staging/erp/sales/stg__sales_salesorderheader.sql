@@ -8,7 +8,7 @@ source as (
         , orderdate
         , duedate
         , shipdate
-        , status
+        , try_cast(status as string) as status
         , onlineorderflag
         , purchaseordernumber
         , accountnumber

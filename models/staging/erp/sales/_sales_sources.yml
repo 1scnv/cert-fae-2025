@@ -24,3 +24,6 @@ sources:
       
       - name: sales_salesreason
         description: Contains sales reason information.
+
+      - name: sales_salesorderheadersalesreason
+        description: Contains sales reason information.
