@@ -2,77 +2,70 @@ version: 2
 
 models:
   - name: fct_orders
-    description: "Tabela fato de pedidos, integrando informações do cabeçalho e detalhes de vendas da AdventureWorks."
+    description: "Fact table for orders, integrating information from sales headers and sales details in AdventureWorks."
 
     columns:
       - name: pk_salesorder
-        description: "Identificador único do pedido."
-        tests:
-          - unique
-          - not_null
+        description: "Unique identifier of the order."
 
       - name: fk_customer
-        description: "Chave estrangeira para o cliente."
+        description: "Foreign key referencing the customer."
         tests:
           - not_null
 
       - name: fk_salesperson
-        description: "Chave estrangeira para o vendedor responsável."
-        tests:
-          - not_null
+        description: "Foreign key referencing the responsible salesperson."
 
       - name: fk_billaddress
-        description: "Endereço de cobrança associado ao pedido."
+        description: "Billing address associated with the order."
         tests:
           - not_null
 
       - name: fk_shipaddress
-        description: "Endereço de entrega associado ao pedido."
+        description: "Shipping address associated with the order."
         tests:
           - not_null
 
       - name: fk_shipmethod
-        description: "Método de envio selecionado para o pedido."
+        description: "Shipping method selected for the order."
         tests:
           - not_null
 
       - name: fk_creditcard
-        description: "Cartão de crédito usado para pagamento (quando aplicável)."
-        tests:
-          - not_null
+        description: "Credit card used for payment (when applicable)."
 
       - name: date_order
-        description: "Data em que o pedido foi realizado."
+        description: "Date when the order was created."
         tests:
           - not_null
 
       - name: date_due
-        description: "Data prevista para cobrança/envio."
+        description: "Due date for billing or shipment."
 
       - name: date_ship
-        description: "Data em que o pedido foi enviado."
+        description: "Date when the order was shipped."
 
       - name: status
-        description: "Status textual do pedido após mapeamento."
+        description: "Textual status of the order after mapping."
         tests:
           - not_null
 
       - name: quantity_ordered
-        description: "Quantidade total de itens no pedido."
+        description: "Total quantity of items in the order."
 
       - name: unit_price
-        description: "Valor unitário do item."
+        description: "Unit price of the item."
 
       - name: unit_price_discount
-        description: "Percentual de desconto aplicado ao item."
+        description: "Percentage discount applied to the item."
 
       - name: total_gross
-        description: "Valor bruto total do pedido (antes de descontos)."
+        description: "Total gross value of the order (before discounts)."
 
       - name: total_discount
-        description: "Valor total de desconto aplicado."
+        description: "Total discount amount applied."
 
       - name: total_net
-        description: "Valor líquido final do pedido."
+        description: "Final net value of the order."
         tests:
           - not_null

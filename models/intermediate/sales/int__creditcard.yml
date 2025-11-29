@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int__sales_creditcard
+    description: Intermediate model that standardizes credit card attributes and prepares them for downstream fact tables.
+    columns:
+      - name: pk_creditcard
+        description: Primary key of the credit card record.
+        tests:
+          - not_null
+          - unique
+
+      - name: card_type
+        description: Type of the credit card used in sales transactions.

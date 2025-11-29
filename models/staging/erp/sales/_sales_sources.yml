@@ -27,3 +27,6 @@ sources:
 
       - name: sales_salesorderheadersalesreason
         description: Contains sales reason information.
+
+      - name: sales_creditcard
+        description: Contains sales credit card information.

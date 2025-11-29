@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_creditcard
+    description: "Staging model with credit card information."
+
+    columns:
+      - name: creditcardid
+        description: "Primary identifier of the credit card."
+        tests:
+          - not_null
+          - unique
+
+      - name: cardtype
+        description: "Type or brand of the credit card."
