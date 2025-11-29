@@ -1,6 +1,78 @@
-with
-    source_sales as (
-        select * from {{ ref('int__sales') }}
-    )
+version: 2
 
-select * from source_sales
+models:
+  - name: fct_orders
+    description: "Tabela fato de pedidos, integrando informações do cabeçalho e detalhes de vendas da AdventureWorks."
+
+    columns:
+      - name: pk_salesorder
+        description: "Identificador único do pedido."
+        tests:
+          - unique
+          - not_null
+
+      - name: fk_customer
+        description: "Chave estrangeira para o cliente."
+        tests:
+          - not_null
+
+      - name: fk_salesperson
+        description: "Chave estrangeira para o vendedor responsável."
+        tests:
+          - not_null
+
+      - name: fk_billaddress
+        description: "Endereço de cobrança associado ao pedido."
+        tests:
+          - not_null
+
+      - name: fk_shipaddress
+        description: "Endereço de entrega associado ao pedido."
+        tests:
+          - not_null
+
+      - name: fk_shipmethod
+        description: "Método de envio selecionado para o pedido."
+        tests:
+          - not_null
+
+      - name: fk_creditcard
+        description: "Cartão de crédito usado para pagamento (quando aplicável)."
+        tests:
+          - not_null
+
+      - name: date_order
+        description: "Data em que o pedido foi realizado."
+        tests:
+          - not_null
+
+      - name: date_due
+        description: "Data prevista para cobrança/envio."
+
+      - name: date_ship
+        description: "Data em que o pedido foi enviado."
+
+      - name: status
+        description: "Status textual do pedido após mapeamento."
+        tests:
+          - not_null
+
+      - name: quantity_ordered
+        description: "Quantidade total de itens no pedido."
+
+      - name: unit_price
+        description: "Valor unitário do item."
+
+      - name: unit_price_discount
+        description: "Percentual de desconto aplicado ao item."
+
+      - name: total_gross
+        description: "Valor bruto total do pedido (antes de descontos)."
+
+      - name: total_discount
+        description: "Valor total de desconto aplicado."
+
+      - name: total_net
+        description: "Valor líquido final do pedido."
+        tests:
+          - not_null
