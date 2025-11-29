@@ -28,18 +28,3 @@ models:
 
         - name: suffix
           description: Name suffix of the person (e.g., Jr., Sr., III), if applicable.
-
-        - name: emailpromotion
-          description: Indicates the level of consent for receiving promotional emails (0 = None, 1 = Occasional, 2 = Frequent).
-
-        - name: additionalcontactinfo
-          description: XML field containing optional additional contact information.
-
-        - name: demographics
-          description: XML field containing demographic data such as income group, education level, and occupation.
-
-        - name: rowguid
-          description: Globally unique identifier (GUID) for the record, used to ensure data consistency across systems.
-
-        - name: modifieddate
-          description: Date and time when the record was last updated in the source system.
