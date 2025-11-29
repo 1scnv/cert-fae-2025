@@ -1,18 +1,16 @@
+version: 2
+
 models:
-  - name: stg__products_category
-    description: keep.
+  - name: stg_productcategory
+    description: "Staging table for product categories."
     columns:
       - name: productcategoryid
-        description: product category primary key
-        tests: 
+        description: "Unique identifier of the product category."
+        tests:
           - not_null
           - unique
 
       - name: name
-        description: category name
-
-      - name: rowguid
-        description: GUID
-
-      - name: modifieddate
-        description: Last update
+        description: "Name of the product category."
+        tests:
+          - not_null

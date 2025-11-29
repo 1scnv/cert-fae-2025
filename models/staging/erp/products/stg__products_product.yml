@@ -1,81 +1,25 @@
+version: 2
+
 models:
-  - name: stg__products_product
-    description: Contains detailed information for each product manufactured or sold by Adventure Works. Each record represents a unique catalog item, including cost, pricing, dimensional, and categorization attributes.
+  - name: stg_product
+    description: "Staging table for product information."
     columns:
       - name: productid
-        description: Unique identifier for the product.
+        description: "Unique identifier of the product."
         tests:
           - not_null
           - unique
 
       - name: name
-        description: Commercial name of the product.
+        description: "Name of the product."
+        tests:
+          - not_null
 
       - name: productnumber
-        description: Internal code that uniquely identifies the product in the company catalog.
-
-      - name: makeflag
-        description: Indicates whether the product is manufactured internally (1) or purchased from suppliers (0).
-
-      - name: finishedgoodsflag
-        description: Indicates whether the product is a finished good ready for sale to customers.
-
-      - name: color
-        description: Product color, if applicable.
-
-      - name: safetystocklevel
-        description: Minimum inventory quantity required to prevent stockouts.
-
-      - name: reorderpoint
-        description: Inventory level at which a new order should be placed.
-
-      - name: standardcost
-        description: Standard manufacturing or acquisition cost of the product.
-
-      - name: listprice
-        description: Suggested retail price for the product.
-
-      - name: size
-        description: Size of the product (e.g., S, M, L, or numerical measurement).
-
-      - name: sizeunitmeasurecode
-        description: Code representing the unit of measure used for product size (e.g., CM, IN).
-
-      - name: weightunitmeasurecode
-        description: Code representing the unit of measure used for product weight (e.g., KG, LB).
-
-      - name: weight
-        description: Product weight in the specified measurement unit.
-
-      - name: daystomanufacture
-        description: Average number of days required to manufacture the product.
-
-      - name: productline
-        description: Code identifying the product line to which the item belongs (e.g., R = Road, M = Mountain).
-
-      - name: class
-        description: Product quality classification (e.g., H = High, M = Medium, L = Low).
-
-      - name: style
-        description: Style of the product (e.g., U = Unisex, M = Male, W = Female).
+        description: "Internal product number."
 
       - name: productsubcategoryid
-        description: Identifier of the product subcategory the item belongs to.
+        description: "Identifier for the product subcategory."
 
       - name: productmodelid
-        description: Identifier of the product model representing its design or configuration.
-
-      - name: sellstartdate
-        description: Date when the product became available for sale.
-
-      - name: sellenddate
-        description: Date when the product stopped being sold, if applicable.
-
-      - name: discontinueddate
-        description: Date when the product was officially discontinued from the catalog.
-
-      - name: rowguid
-        description: Globally unique identifier (GUID) for the record, used for data replication and tracking.
-
-      - name: modifieddate
-        description: Date when the record was last updated in the source system.
+        description: "Identifier for the product model."
