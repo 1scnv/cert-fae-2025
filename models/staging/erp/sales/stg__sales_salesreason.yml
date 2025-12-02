@@ -3,22 +3,17 @@ version: 2
 models:
   - name: stg__sales_salesreason
     description: >
-      Staging model that standardizes and exposes fields from the
-      SalesReason table. This model prepares reason metadata for use in
-      intermediate and dimensional layers.
-
+      Staging model for sales reasons. Each record represents a reason
+      why a customer made a purchase (e.g., Promotion, Marketing, Other).
     columns:
       - name: salesreasonid
-        description: Primary key of the sales reason.
+        description: Unique identifier for the sales reason.
         tests:
           - not_null
           - unique
 
       - name: name
-        description: Descriptive label for the sales reason.
+        description: Description of the sales reason (e.g., 'Price', 'Promotion').
 
       - name: reasontype
-        description: Category or classification of the sales reason.
-
-      - name: modifieddate
-        description: Timestamp of the last update applied to the record.
+        description: Category grouping reasons together (e.g., 'Marketing', 'Promotion').

@@ -4,13 +4,11 @@ with
             businessentityid as pk_person,
             persontype as person_type,
             namestyle as name_style,
-            title as title,
+            title,
             firstname as first_name,
             middlename as middle_name,
             lastname as last_name,
-            suffix as suffix,
-            emailpromotion as email_promotion,
-            modifieddate as modified_date
+            suffix
         from {{ ref("stg__person_person") }}
     )
 

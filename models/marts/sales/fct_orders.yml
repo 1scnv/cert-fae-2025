@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table for orders, integrating information from sales headers and sales details in AdventureWorks."
+
+    columns:
+      - name: pk_salesorder
+        description: "Unique identifier of the order."
+
+      - name: fk_customer
+        description: "Foreign key referencing the customer."
+        tests:
+          - not_null
+
+      - name: fk_salesperson
+        description: "Foreign key referencing the responsible salesperson."
+
+      - name: fk_billaddress
+        description: "Billing address associated with the order."
+        tests:
+          - not_null
+
+      - name: fk_shipaddress
+        description: "Shipping address associated with the order."
+        tests:
+          - not_null
+
+      - name: fk_shipmethod
+        description: "Shipping method selected for the order."
+        tests:
+          - not_null
+
+      - name: fk_creditcard
+        description: "Credit card used for payment (when applicable)."
+
+      - name: date_order
+        description: "Date when the order was created."
+        tests:
+          - not_null
+
+      - name: date_due
+        description: "Due date for billing or shipment."
+
+      - name: date_ship
+        description: "Date when the order was shipped."
+
+      - name: status
+        description: "Textual status of the order after mapping."
+        tests:
+          - not_null
+
+      - name: quantity_ordered
+        description: "Total quantity of items in the order."
+
+      - name: unit_price
+        description: "Unit price of the item."
+
+      - name: unit_price_discount
+        description: "Percentage discount applied to the item."
+
+      - name: total_gross
+        description: "Total gross value of the order (before discounts)."
+
+      - name: total_discount
+        description: "Total discount amount applied."
+
+      - name: total_net
+        description: "Final net value of the order."
+        tests:
+          - not_null

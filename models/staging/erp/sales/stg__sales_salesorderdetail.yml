@@ -13,26 +13,14 @@ models:
           - not_null
           - unique
 
-      - name: carriertrackingnumber
-        description: Tracking number assigned by the carrier for shipment tracking.
-
       - name: orderqty
         description: Quantity of the product ordered on this line item.
 
       - name: productid
         description: Identifier of the product sold in this order detail.
 
-      - name: specialofferid
-        description: Identifier linking the product to a special offer or promotion.
-
       - name: unitprice
         description: Selling price per unit of the product at the time of the order.
 
       - name: unitpricediscount
         description: Discount applied per unit of the product.
-
-      - name: rowguid
-        description: Globally unique identifier for the record, used for data synchronization.
-
-      - name: modifieddate
-        description: Date and time when the record was last updated.

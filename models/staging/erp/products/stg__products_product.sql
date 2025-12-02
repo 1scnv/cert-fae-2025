@@ -1,32 +1,13 @@
-with 
+with
+
     source as (
         select
-            productid,
-            name,
-            productnumber,
-            makeflag,
-            finishedgoodsflag,
-            color,
-            safetystocklevel,
-            reorderpoint,
-            standardcost,
-            listprice,
-            size,
-            sizeunitmeasurecode,
-            weightunitmeasurecode,
-            weight,
-            daystomanufacture,
-            productline,
-            class,
-            style,
-            productsubcategoryid,
-            productmodelid,
-            sellstartdate,
-            sellenddate,
-            discontinueddate,
-            rowguid,
-            modifieddate 
-        from {{source('raw_products_aw','production_product')}}
+            cast(productid as int) as productid
+            , cast(name as string) as name
+            , cast(productnumber as string) as productnumber
+            , cast(productsubcategoryid as int) as productsubcategoryid
+            , cast(productmodelid as int) as productmodelid
+        from {{ source('raw_products_aw', 'production_product') }}
     )
 
 select *

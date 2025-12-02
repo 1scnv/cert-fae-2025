@@ -1,81 +1,69 @@
+version: 2
+
 models:
   - name: stg__sales_salesorderheader
-    description: Contains header-level information for each sales order. Each record represents a single customer order and includes financial, shipping, and billing details.
+    description: "Staging table for SalesOrderHeader, containing standardized and typed sales order data."
     columns:
       - name: salesorderid
-        description: Unique identifier for the sales order.
+        description: "Unique identifier for the sales order."
         tests:
           - not_null
           - unique
 
       - name: revisionnumber
-        description: Revision number for tracking changes to the sales order.
+        description: "Revision number of the record."
 
       - name: orderdate
-        description: Date when the order was created.
+        description: "Date when the order was placed."
+        tests:
+          - not_null
 
       - name: duedate
-        description: Date by which the order is scheduled to be fulfilled.
+        description: "Planned completion date for the order."
 
       - name: shipdate
-        description: Date when the order was shipped to the customer.
+        description: "Date when the order was shipped."
 
       - name: status
-        description: Numeric code representing the status of the order (e.g., In Process, Shipped, Cancelled).
+        description: "Order status as recorded in the operational system."
 
       - name: onlineorderflag
-        description: Indicates whether the order was placed online.
-
-      - name: purchaseordernumber
-        description: Customer’s purchase order number.
-
-      - name: accountnumber
-        description: Customer’s account number used for billing and identification.
+        description: "Indicates whether the order was placed online."
 
       - name: customerid
-        description: Identifier of the customer who placed the order.
+        description: "Identifier of the customer associated with the order."
+        tests:
+          - not_null
 
       - name: salespersonid
-        description: Identifier of the salesperson responsible for the order.
+        description: "Identifier of the salesperson responsible for the order."
 
       - name: territoryid
-        description: Identifier of the sales territory associated with the order.
+        description: "Identifier of the sales territory."
 
       - name: billtoaddressid
-        description: Identifier of the billing address for the order.
+        description: "Identifier of the billing address."
 
       - name: shiptoaddressid
-        description: Identifier of the shipping address for the order.
+        description: "Identifier of the shipping address."
 
       - name: shipmethodid
-        description: Identifier of the shipping method used for delivery.
+        description: "Identifier of the shipping method."
 
       - name: creditcardid
-        description: Identifier of the credit card used for payment, if applicable.
-
-      - name: creditcardapprovalcode
-        description: Approval code returned by the credit card authorization process.
+        description: "Identifier of the credit card used for the order."
 
       - name: currencyrateid
-        description: Identifier of the currency exchange rate applied to the order.
+        description: "Identifier of the currency conversion rate applied."
 
       - name: subtotal
-        description: Total value of the order before taxes and shipping fees.
+        description: "Gross value of the items before taxes and freight."
 
       - name: taxamt
-        description: Amount of sales tax charged on the order.
+        description: "Total tax amount applied to the order."
 
       - name: freight
-        description: Shipping cost associated with the order.
+        description: "Freight charges applied to the order."
 
       - name: totaldue
-        description: Total amount due for the order after all charges.
-
-      - name: comment
-        description: Optional comments or special instructions related to the order.
-
-      - name: rowguid
-        description: Globally unique identifier for the record, used for data synchronization.
-
-      - name: modifieddate
-        description: Date and time when the record was last updated.
+        description: "Total amount due from the customer."
