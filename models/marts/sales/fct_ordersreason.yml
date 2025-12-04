@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_salesreason
+    description: "Bridge fact that links orders to sales reasons, modeling the many-to-many relationship."
+
+    columns:
+      - name: fk_salesorder
+        description: "Foreign key referencing the order."
+        tests:
+          - not_null
+
+      - name: fk_salesreason
+        description: "Foreign key referencing the sales reason."
+        tests:
+          - not_null

@@ -1,11 +1,10 @@
-with 
+with
+
     source as (
         select
-            productcategoryid,
-            name,
-            rowguid,
-            modifieddate
-        from {{source('raw_products_aw','production_productcategory')}}
+            cast(productcategoryid as int) as productcategoryid
+            , cast(name as string) as name
+        from {{ source('raw_products_aw', 'production_productcategory') }}
     )
 
 select *

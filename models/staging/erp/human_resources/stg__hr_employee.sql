@@ -1,8 +1,8 @@
 with
     source as (
         select
-            businessentityid,
-            jobtitle
+            cast(businessentityid as int) as businessentityid
+            , cast(jobtitle as string) as jobtitle
         from {{source('raw_person_aw','humanresources_employee')}}
     )
 
